@@ -1,0 +1,652 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+
+<!-- ****** EN ESTA PARTE REFERENCIAMOS LOS ARCHIVOS CSS QUE SE USARAN EN EL PROYECTO ***** -->
+
+<link rel="stylesheet" href="css/MiTema.css" type="text/css" />
+<link rel="stylesheet" href="css/MiTema.min.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" type="text/css" />
+<link href="css/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<!-- ******************************************************************************************* -->
+
+<!-- ****** EN ESTA PARTE REFERENCIAMOS LOS ARCHIVOS JQUERY QUE SERAN USADOS EN EL PROYECTO ***** -->
+<script src="jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="jquery/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<!-- ******************************************************************************************* -->
+</head> 
+<body> 
+
+<!-- ****** PAGINA PRINCIPAL DEL PROYECTO ***** -->
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1><img src="images/LogoApple.png" width="150px" height="50px"></h1>
+	</div>
+    
+	<div data-role="content">
+	     <div data-role="navbar" data-grid="d">
+        	<ul>
+            <li><a href="#mac">Mac</a></li>
+            <li><a href="#ipad">iPad</a></li>
+            <li><a href="#iphone">iPhone</a></li>
+            <li><a href="#watch">Watch</a></li>
+            <li><a href="#tv">TV / Music</a></li>
+            </ul>
+		</div>    
+     
+     <p>
+     	<h1 align="center"> 
+        	Familia Apple 
+            <a href="#popupInfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" data-rel="popup" data-transition="pop">Mas Información</a>
+         </h1>
+     </p>
+     
+      <p><h5 align="center">Grandes productos, para grandes personas</h5></p>    
+             
+     <div id="main-content" role="main" class="ui-content">
+     	<div class="ui-grid-solo">
+        	<div id="photos-container" class="ui-block-a">
+            	<img style="display: block;" id="smallImage" src="images/productos.jpg" />                       
+            </div>
+        </div>
+     </div>    
+     
+     <ul data-role="listview" data-inset="true" data-theme="b">     	
+  		<li data-role="collapsible" data-iconpos="right" data-inset="false">
+    		<h2>Principios de Apple</h2>
+	    	<ul data-role="listview" data-theme="b">
+		      	<li><a href="#page1">Accesibilidad</a></li>
+		        <li><a href="#page2">Medio ambiente</a></li>
+                <li><a href="#page3">Privacidad</a></li>
+	    	</ul>            
+            <li><a href="#page4">Historia</a></li>
+  		</li>        
+	</ul>
+</div>
+
+    <div data-role="footer" data-position="fixed">
+	   <h4>©Roberto Elvira Enriquez</h4>
+    </div>
+
+
+<!-- ****** POPUP TOOLTIP PARA AYUDA EN LA PAGUINA PRINCIPAL ***** -->
+
+<div data-role="popup" id="popupInfo" class="ui-content" data-theme="a" style="max-width:350px;">
+  	<p>Seleccione alguna de las <strong>Opciones del menú</strong> para conocer los productos.</p>
+</div>
+<!-- ****************************************************************************************** -->    
+
+</div>
+
+
+<!-- ****** PRIMERA PAGINA DEL PRYECTO ***** -->
+<div data-role="page" id="page1" data-theme="b">
+	<div data-role="header">
+		<h1>Accesibilidad</h1>
+		<a href="#page" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flow">Home</a>		
+	</div>
+	<div data-role="content">
+    
+    <ul>
+	    <li>
+        	<h4>La tecnología es más poderosa cuando mejora la vida de todos.-</h4> 
+            <p align="justify">Tomar una foto familiar, ponerse al día usando FaceTime o abrir las persianas al despertar. Queremos que todas las personas disfruten de las cosas cotidianas con la ayuda de la tecnología. Por eso, trabajamos para que cada producto Apple sea accesible desde el primer momento. Porque el valor real de un dispositivo no está en cuánta potencia tiene, sino en cuánto poder te brinda.</p>
+    	</li>
+        <li>
+        	<h4>Visión: A veces una palabra dice más que mil imágenes.-</h4> 
+            <p align="justify">Los dispositivos Apple te permiten escribir un mensaje de texto o un email sin mirar la pantalla. Y hasta puedes tomar una selfie grupal perfecta con sólo escuchar cuántos rostros aparecen dentro del cuadro. Puede parecer magia, pero es el resultado de un gran diseño.</p>
+	<center>
+       	<a href="#acc1" data-rel="popup" data-position-to="window" data-transition="fade">
+       		<img class="popphoto" src="images/acc1a.png" width="100px" height="200px">
+       	</a>
+		<a href="#acc2" data-rel="popup" data-position-to="window" data-transition="fade">
+        	<img class="popphoto" src="images/acc2a.png" width="100px" height="200px">
+        </a>
+		<a href="#acc3" data-rel="popup" data-position-to="window" data-transition="fade">
+        	<img class="popphoto" src="images/acc3a.png" width="150px" height="200px">
+        </a>
+	</center>
+
+<div data-role="popup" id="acc1" data-overlay-theme="b" data-theme="b" data-corners="false">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/acc1.png" style="max-height:500px;" >
+</div>
+<div data-role="popup" id="acc2" data-overlay-theme="b" data-theme="b" data-corners="false">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/acc2.png" style="max-height:500px;" >
+</div>
+<div data-role="popup" id="acc3" data-overlay-theme="b" data-theme="b" data-corners="false">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/acc3.png" style="max-height:500px;" >
+</div>    
+    	</li>
+        <li>
+        	<h4>Audición: Queremos que todos se sumen a la conversación.-</h4> 
+            <p align="justify">Diseñar un producto para que sea accesible permite que más personas puedan hacer lo que les gusta. Por eso, en cada sistema operativo y cada dispositivo incluimos poderosas funcionalidades que ayudan a las personas sordas o con dificultades auditivas.</p>
+            
+    <center>
+       	<a href="#aud1" data-rel="popup" data-position-to="window" data-transition="fade">
+       		<img class="popphoto" src="images/aud1a.png" width="100px" height="200px">
+       	</a>
+		<a href="#aud2" data-rel="popup" data-position-to="window" data-transition="fade">
+        	<img class="popphoto" src="images/aud2a.png" width="100px" height="200px">
+        </a>
+		<a href="#aud3" data-rel="popup" data-position-to="window" data-transition="fade">
+        	<img class="popphoto" src="images/aud3a.png" width="100px" height="200px">
+        </a>
+	</center>
+
+<div data-role="popup" id="aud1" data-overlay-theme="b" data-theme="b" data-corners="false">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/aud1.png" style="max-height:500px;" >
+</div>
+<div data-role="popup" id="aud2" data-overlay-theme="b" data-theme="b" data-corners="false">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/aud2.png" style="max-height:500px;" >
+</div>
+<div data-role="popup" id="aud3" data-overlay-theme="b" data-theme="b" data-corners="false">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/aud3.png" style="max-height:500px;" >
+</div>               
+    	</li>
+        <li>
+        	<h4>Habilidades físicas y motoras: Un toque. Una palabra. Un millón de posibilidades.-</h4> 
+            <p align="justify">Incluimos poderosas funcionalidades asistenciales en los productos Apple para que las personas con limitaciones físicas puedan hacer de todo fácilmente. Puedes usar teclados en pantalla y navegar por menús con un solo toque gracias a Control por Botón, personalizar gestos Multi-Touch accesibles según tus necesidades o controlar los accesorios compatibles con HomeKit usando sólo tu voz.</p>
+            
+    <center>
+       	<a href="#unt1" data-rel="popup" data-position-to="window" data-transition="fade">
+       		<img class="popphoto" src="images/unt1a.png" width="100px" height="100px">
+       	</a>
+		<a href="#unt2" data-rel="popup" data-position-to="window" data-transition="fade">
+        	<img class="popphoto" src="images/unt2a.png" width="100px" height="200px">
+        </a>
+		<a href="#unt3" data-rel="popup" data-position-to="window" data-transition="fade">
+        	<img class="popphoto" src="images/unt3a.png" width="150px" height="200px">
+        </a>
+	</center>
+
+<div data-role="popup" id="unt1" data-overlay-theme="b" data-theme="b" data-corners="false">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/unt1.png" style="max-height:500px;" >
+</div>
+<div data-role="popup" id="unt2" data-overlay-theme="b" data-theme="b" data-corners="false">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/unt2.png" style="max-height:500px;" >
+</div>
+<div data-role="popup" id="unt3" data-overlay-theme="b" data-theme="b" data-corners="false">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/unt3.png" style="max-height:500px;" >
+</div>    
+    	</li>        
+    </ul>	
+
+     
+             
+    
+    
+    
+	</div>
+
+
+	<div data-role="footer" data-position="fixed">
+		<h4>©Roberto Elvira Enriquez</h4>
+	</div>
+</div>
+<!-- ******************************************************************************************* -->
+
+<!-- ****** SEGUNDA PAGINA DEL PRYECTO ***** -->
+<div data-role="page" id="page2" data-theme="b">
+	<div data-role="header">
+		<h1>Medio ambiente</h1>		
+		<a href="#page" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flow">Home</a>
+		
+	</div>
+	<div data-role="content">	
+    
+    <p><h2 align="center">Los productos realmente innovadores son los que dejan su huella en el mundo, no en el planeta.</h2></p>
+	<div id="main-content" role="main" class="ui-content">
+     	<div class="ui-grid-solo">
+        	<div id="photos-container" class="ui-block-a">
+            	<img style="display: block;" id="smallImage" src="images/medioambiente.png" />                       
+            </div>
+        </div>
+     </div>
+	<ul>
+	    <li>
+        	<h4>Bajo impacto. El nuevo estándar en alto rendimiento.-</h4> 
+            <p align="justify">Tus productos Apple son innovadores tanto en lo que hacen como en la forma en que se fabrican y los materiales que los componen. Así lo demuestran las nuevas MacBook Air y Mac mini. Sus estructuras se fabrican con aluminio 100% reciclado sin comprometer su resistencia o acabado. En muchos sentidos, los productos más avanzados son los que producen el menor impacto medioambiental.</p>
+    	</li>
+        <li>
+        	<h4>Creado para que dure tanto como sea humanamente posible.-</h4> 
+            <p align="justify">Tu dispositivo es parte de tu vida, por eso lo diseñamos para que te acompañe durante muchos años. Está hecho con materiales muy resistentes, tiene un sistema operativo que se actualiza constantemente y cuenta con el respaldo de una red de más de 5,000 servicios de reparación certificados por Apple a los que puedes acudir si surge algún imprevisto. Porque mientras más tiempo dure tu dispositivo, mejor será para el planeta.</p>        
+        </li>
+        <li>
+        	<h4>Recicla tu dispositivo Apple para que sus materiales puedan ser reutilizados.-</h4> 
+            <p align="justify">Si crees que ya es hora de renovar tu dispositivo, recuerda que todavía puede servir. Nosotros te ayudamos a reciclarlo gratis.3 Haz un respaldo de tu información, borra el contenido de tu dispositivo y luego mándaselo a uno de nuestros socios encargados de recuperar y reutilizar sus valiosos materiales. Hasta podría llegar a formar parte de las carcasas de aluminio 100% reciclado de la MacBook Air.</p>  
+     <center>       
+    <a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-recycle ui-btn-icon-left" data-transition="pop">Como Reciclar</a>
+    </center>
+	<div data-role="popup" id="popupBasic">
+		<p>1.- Haz un respaldo de tu dispositivo.</p>
+        <p>2.- Borra los datos de tu dispositivo.</p>
+        <p>3.- Comunícate con la empresa de reciclaje local.</p>        
+	</div>        
+        </li>
+    </ul>       
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>©Roberto Elvira Enriquez</h4>
+	</div>
+</div>
+<!-- ******************************************************************************************* -->
+
+<!-- ****** TERCERA PAGINA DEL PRYECTO ***** -->
+<div data-role="page" id="page3" data-theme="b">
+	<div data-role="header">
+		<h1>Privacidad</h1>		
+		<a href="#page" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flow">Home</a>
+		
+	</div>
+
+	<div data-role="content">	
+		<div id="main-content" role="main" class="ui-content">
+     	<div class="ui-grid-solo">
+        	<div id="photos-container" class="ui-block-a">
+            	<img style="display: block;" id="smallImage" src="images/Apple-seguridad.jpg" />                       
+            </div>
+        </div>
+     </div>	
+        <ul>
+        <li>
+            <h4>Los productos Apple están pensados para proteger tu privacidad.-</h4> 
+            <p align="justify">Para Apple, la privacidad es un derecho humano fundamental. 
+                Sabemos que tus dispositivos Apple guardan mucha de tu información personal. 
+                <br><br>                
+                Y tú tienes derecho a que esa información esté bien protegida.
+                <br><br>
+                Tu frecuencia cardiaca después de correr, dónde compraste tu último café, los sitios web que visitas y a quién llamas o le envías un email o un mensaje. 
+                <br><br>
+                Todos los productos Apple están completamente diseñados para proteger esa información. Y queremos que sólo tú decidas qué compartes y con quién.
+                <br><br>
+                Hemos demostrado una y otra vez que disfrutar de una experiencia extraordinaria no tiene por qué comprometer tu privacidad ni tu seguridad. Por el contrario, son cosas que se complementan.
+            </p>
+        </li>
+        <li>
+            <h4>Sólo tú tienes acceso a tu dispositivo.-</h4> 
+            <p align="justify">Es muy fácil proteger tus dispositivos. Sólo tienes que escoger un código de acceso de seis dígitos, que será muy difícil de descifrar porque hay un millón de combinaciones posibles, o activar Touch ID o Face ID, las dos tecnologías de seguridad más avanzadas usadas en dispositivos personales. Y si deseas aún más seguridad, puedes configurar un código alfanumérico tan complejo como quieras.</p>        
+        </li>
+        <li>
+            <h4>Tu información personal te pertenece a ti. Y a nadie más que a ti.-</h4> 
+            <p align="justify">Puedes tomar fotos, preguntarle cosas a Siri o pedir indicaciones con toda tranquilidad, ya que Apple no almacena tu información personal para vendérsela a anunciantes ni a otras organizaciones.
+            </p>  
+        </li>
+        <li>
+            <h4>Tus posibilidades aumentan. Tus datos siguen siendo privados.-</h4> 
+            <p align="justify">Cuando usamos tus datos para ofrecerte una mejor experiencia, siempre tratamos de hacerlo de una manera que no comprometa tu privacidad. Por ejemplo, fuimos pioneros en el uso de la privacidad diferencial, que nos permite cifrar tus datos y combinarlos con los datos de millones de usuarios más. De esta forma vemos patrones generales en vez de datos específicos que puedan relacionarse contigo. Estos patrones nos ayudan a identificar cosas como los índices de consumo de energía en Safari.
+            </p>  
+        </li>
+        <li>
+            <h4>No importa lo que guardes o envíes, tu información está protegida.-</h4> 
+            <p align="justify">Cuando le mandas un iMessage a un amigo o haces una llamada de FaceTime, tus datos se encriptan para protegerte. Lo mismo pasa con la información personal que guardas en tu dispositivo. Por ejemplo, la información que se usa para identificarte con Touch ID o Face ID se convierte en una representación matemática que se encripta y se protege en el Secure Enclave en tu dispositivo, y ni iOS ni las apps pueden acceder a ella. Tampoco se guarda en los servidores de Apple ni se hacen respaldos en iCloud.
+            </p>  
+        </li>
+        <li>
+            <h4>Tus apps siguen tus reglas.-</h4> 
+            <p align="justify">Todos los desarrolladores de apps están obligados a cumplir con directrices muy estrictas diseñadas para proteger tu privacidad. Si nos enteramos de que una app viola estas directrices, el desarrollador debe solucionar el problema, de lo contrario retiramos la app del App Store. Y si una app que instalaste en tu dispositivo quiere acceder a tu información personal, como tus fotos o contactos, solicitará tu permiso mediante una notificación. Podrás modificar estos permisos cuando quieras.
+            </p>  
+        </li> 
+        
+    </ul>     
+
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>©Roberto Elvira Enriquez</h4>
+	</div>
+</div>
+<!-- ******************************************************************************************* -->
+
+<!-- ****** CUARTA PAGINA DEL PRYECTO ***** -->
+<div data-role="page" id="page4" data-theme="b">
+	<div data-role="header">
+		<h1>Historia</h1>		
+		<a href="#page" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flow">Home</a>
+		
+	</div>
+	<div data-role="content">	
+		<div id="main-content" role="main" class="ui-content">
+     	<div class="ui-grid-solo">
+        	<div id="photos-container" class="ui-block-a">
+            	<img style="display: block;" id="smallImage" src="images/Apple-Historia.png" />                       
+            </div>
+        </div>
+     </div>
+     
+<table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke">
+     <thead>
+       <tr>
+         <th data-priority="2">#</th>
+         <th>Suceso Histórico</th>
+         <th data-priority="1">Fecha</th> 
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         	<th>1</th>
+         	<td>Fundación e incorporación.</td>
+         	<td>1976-1980</td>
+       </tr>
+       <tr>
+         	<th>2</th>
+         	<td><a href="https://es.wikipedia.org/wiki/Macintosh" data-rel="external">Éxito con el Macintosh.</a></td>
+            <td>1981-1989</td>
+       </tr>
+		<tr>
+         	<th>3</th>
+         	<td>Declive y reestructuración.</td>
+            <td>1990-1999</td>
+       </tr>
+		<tr>
+         	<th>4</th>
+         	<td>Regreso a beneficios.</td>
+            <td>2000-2006</td>
+       </tr>
+		<tr>
+         	<th>5</th>
+         	<td>Éxito con dispositivos portátiles.</td>
+            <td>2007-2010</td>
+       </tr>
+		<tr>
+         	<th>6</th>
+         	<td><a href="https://es.wikipedia.org/wiki/Steve_Jobs" data-rel="external">Muerte de Steve Jobs.</a></td>
+            <td>2011</td>
+       </tr>
+		<tr>
+         	<th>7</th>
+         	<td>presente: Adquisiciones y expansión.</td>
+            <td>2013-presente</td>
+       </tr>
+		    
+     </tbody>
+   </table>     
+     <center>       
+    <a href="https://es.wikipedia.org/wiki/Apple#Historia" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-action ui-btn-icon-left" data-transition="pop">Ver Articulo Completo</a>
+    </center>    
+     
+     <p><h1 align="center">Evolucion del logotipo</h1></p>   
+
+	<div id="pricing-table" class="clear">
+    	<div class="plan">
+        	<h3><span><img class="popphoto" src="images/Logo1.png" width="50px" height="80px"></span></h3>
+		         <a href="#log1" data-rel="popup" data-position-to="window" data-transition="fade">Vel Logotipo</a>         
+        	<ul>
+            	<li><b>Primer logotipo<br></b>.</li>
+	            <li>Diseñado por: <b>Ronald Wayne</b></li>			
+	        </ul> 
+    	</div>   
+	    <div class="plan">
+        	<h3><span><img class="popphoto" src="images/Logo2.png" width="80px" height="80px"></span></h3>
+		         <a href="#log2" data-rel="popup" data-position-to="window" data-transition="fade">Ver Logotipo</a>         
+        	<ul>
+            	<li><b>Logo de Apple desde: <br>1977 a 1998</b></li>
+	            <li>Diseñado por: <b>Rob Janoff</b></li>			
+	        </ul> 
+    	</div>      
+	</div>
+
+	<div id="pricing-table" class="clear">
+    	<div class="plan">
+        	<h3><span><img class="popphoto" src="images/Logo3.png" width="80px" height="80px"></span></h3>
+		         <a href="#log3" data-rel="popup" data-position-to="window" data-transition="fade">Ver Logotipo</a>         
+        	<ul>
+            	<li><b>Manzana <br>monocromática</b></li>
+	            <li>Usado desde: <b>1998</b></li>			
+	        </ul> 
+    	</div>   
+	    <div class="plan">
+        	<h3><span><img class="popphoto" src="images/Logo4.png" width="80px" height="80px"></span></h3>
+		         <a href="#log4" data-rel="popup" data-position-to="window" data-transition="fade">Ver Logotipo</a>         
+        	<ul>
+            	<li><b>Variante <br>cromada</b></li>
+	            <li>Usado entre: <b>2007- 2013</b></li>			
+	        </ul> 
+    	</div>      
+	</div>
+    <div id="pricing-table" class="clear">
+    	<div class="plan">
+        	<h3><span><img class="popphoto" src="images/Logo5.png" width="80px" height="80px"></span></h3>
+		         <a href="#log5" data-rel="popup" data-position-to="window" data-transition="fade">Ver Logotipo</a>         
+        	<ul>
+            	<li><b>Manzana de <br>1998</b></li>
+	            <li>Actualizada en: <b>2013</b></li>			
+	        </ul> 
+    	</div>   	     
+	</div>
+    
+<div data-role="popup" id="log1" data-overlay-theme="b" data-theme="b" data-corners="false">
+	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/Logo1.png" style="max-height:512px;">
+</div>
+
+<div data-role="popup" id="log2" data-overlay-theme="b" data-theme="b" data-corners="false">    
+	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/Logo2.png" style="max-height:512px;">
+</div>
+
+<div data-role="popup" id="log3" data-overlay-theme="b" data-theme="b" data-corners="false">    
+	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/Logo3.png" style="max-height:512px;">
+</div>
+
+<div data-role="popup" id="log4" data-overlay-theme="b" data-theme="b" data-corners="false">    
+	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/Logo4.png" style="max-height:512px;">
+</div>
+
+<div data-role="popup" id="log5" data-overlay-theme="b" data-theme="b" data-corners="false">    
+	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/Logo5.png" style="max-height:512px;">
+</div>
+     
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>©Roberto Elvira Enriquez</h4>
+	</div>
+</div>
+<!-- ******************************************************************************************* -->
+
+<!-- ****** QUINTA PAGINA DEL PRYECTO ***** -->
+<div data-role="page" id="mac" data-theme="b">
+	<div data-role="header">
+		<h1>Esto es iMac.</h1>		
+		<a href="#page" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flow">Home</a>
+		
+	</div>
+
+	<div data-role="content">	
+		<div id="main-content" role="main" class="ui-content">
+     	<div class="ui-grid-solo">
+        	<div id="photos-container" class="ui-block-a">
+            	<img style="display: block;" id="smallImage" src="images/imac.png" />                       
+            </div>
+        </div>
+     </div>	
+     
+     <h2 align="center">Esto es iPad. iMac Belleza todopoderosa.</h2>		
+     
+      <p align="justify">El objetivo esencial de la iMac no ha cambiado: transformar la experiencia de las computadoras de escritorio integrando tecnologías avanzadas y fáciles de usar en un diseño elegante y todo-en-uno. 
+<br><br>
+La nueva iMac lleva esa idea más allá con herramientas increíbles que ofrecen una infinidad de posibilidades. Ahora viene con los últimos procesadores, una memoria más rápida, gráficos increíbles y la pantalla Retina más brillante y espectacular en una Mac hasta ahora. El paquete completo, ahora más poderoso. </p>              
+
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>©Roberto Elvira Enriquez</h4>
+	</div>
+</div>
+<!-- ******************************************************************************************* -->
+
+<!-- ****** SEXTA PAGINA DEL PRYECTO ***** -->
+<div data-role="page" id="ipad" data-theme="b">
+	<div data-role="header">
+		<h1>Esto es iPad.</h1>		
+		<a href="#page" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flow">Home</a>
+		
+	</div>
+
+	<div data-role="content">	
+		<div id="main-content" role="main" class="ui-content">
+     	<div class="ui-grid-solo">
+        	<div id="photos-container" class="ui-block-a">
+            	<img style="display: block;" id="smallImage" src="images/ipad.png" />                       
+            </div>
+        </div>
+     </div>	
+     
+    	<h2 align="center">Esto es iPhone.Bienvenido a la nueva generación de iPad.</h2>		
+            
+      <p align="justify">El iPad tiene todo lo que necesitas de una computadora, y muchas otras cosas increíbles que no encontrarás en ninguna. Aquí tienes algunas razones por las que tu próxima computadora podría ser un iPad. 
+      <br><br>
+      El iPad tiene potentes chips diseñados por Apple, como el chip A12X Bionic con Neural Engine del iPad Pro. Estos chips llevan a otro nivel todo lo que puedes hacer con tus fotos, juegos y realidad aumentada. También hacen que el iPad tenga potencia de sobra para las apps que usas todos los días, e incluso apps profesionales como Adobe Photoshop CC.</p>              
+
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>©Roberto Elvira Enriquez</h4>
+	</div>
+</div>
+<!-- ******************************************************************************************* -->
+
+<!-- ****** SEPTIMA PAGINA DEL PRYECTO ***** -->
+<div data-role="page" id="iphone" data-theme="b">
+	<div data-role="header">
+		<h1>Esto es iPhone.</h1>		
+		<a href="#page" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flow">Home</a>
+		
+	</div>
+
+	<div data-role="content">	
+		<div id="main-content" role="main" class="ui-content">
+     	<div class="ui-grid-solo">
+        	<div id="photos-container" class="ui-block-a">
+            	<img style="display: block;" id="smallImage" src="images/iphone.png" />                       
+            </div>
+        </div>
+     </div>	
+     
+     <h2 align="center">Todo cambia cuando te cambias al iPhone.</h2>	
+     
+      <p align="justify">La mayoría de las apps del App Store pueden descargarse de forma gratuita. Lo que sea que te interese, cuentas con más de un millón de apps que transformarán la forma de hacer lo que te gusta.
+<br><br>
+El App Store es el mejor lugar para descubrir apps con las que puedes crear, jugar, aprender y hacer tus tareas cotidianas de maneras que ni te imaginas. Su equipo de editores prueba las apps y los juegos para asegurarse de que funcionen como deberían, y también se encarga de curar el mejor contenido y publicar historias para que conozcas lo último en apps o aprendas más sobre las que ya tienes.
+<br><br>
+Una de las primeras cosas que vas a notar del iPhone es lo fácil que resulta usarlo. iOS, su sistema operativo, está diseñado para ser simple e intuitivo.
+
+Desliza un dedo, di “Oye Siri” o mira el teléfono para hacer lo que quieras rápidamente: abrir una app, poner tu canción favorita o personalizar el iPhone a tu gusto. Además, viene con la app Consejos, que te ayudará a aprovechar tu dispositivo al máximo.</p>              
+
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>©Roberto Elvira Enriquez</h4>
+	</div>
+</div>
+<!-- ******************************************************************************************* -->
+
+<!-- ****** SEPTIMA PAGINA DEL PRYECTO ***** -->
+<div data-role="page" id="watch" data-theme="b">
+	<div data-role="header">
+		<h1>Esto es Watch.</h1>		
+		<a href="#page" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flow">Home</a>
+		
+	</div>
+
+	<div data-role="content">	
+		<div id="main-content" role="main" class="ui-content">
+     	<div class="ui-grid-solo">
+        	<div id="photos-container" class="ui-block-a">
+            	<img style="display: block;" id="smallImage" src="images/watch.png" />                       
+            </div>
+        </div>
+     </div>	
+     
+     <h2 align="center">Todo cambio empieza por dentro.</h2>	
+     
+      <p align="justify">El Apple Watch es el primer smartwatch creado por la empresa tecnológica Apple, presentado el 9 de septiembre de 2014 en su Keynote por Tim Cook.
+<br><br>
+Es el primer reloj inteligente de la compañía presume de acero inoxidable, cristal de zafiro, y de una serie de aplicaciones enfocadas a hacerse con el trono de los cuantificadores personales.
+<br><br>
+El aspecto del reloj descarta las aproximaciones más locas con las que se especulaba y apuesta por un diseño realmente simple, con una carcasa de acero presidida por una pantalla que casi no tiene bordes. Un botón físico y una rueda como la de los relojes convencionales destacan en el lateral derecho.
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>©Roberto Elvira Enriquez</h4>
+	</div>
+</div>
+<!-- ******************************************************************************************* -->
+
+
+<!-- ****** OCTAVA PAGINA DEL PRYECTO ***** -->
+<div data-role="page" id="tv" data-theme="b">
+	<div data-role="header">
+		<h1>Apple TV / Music</h1>		
+		<a href="#page" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flow">Home</a>
+		
+	</div>
+
+     <h2 align="center">Televisión visionaria.</h2>	
+     
+	<div data-role="content">	
+		<div id="main-content" role="main" class="ui-content">
+     	<div class="ui-grid-solo">
+        	<div id="photos-container" class="ui-block-a">
+            	<img style="display: block;" id="smallImage" src="images/tv.png" />                       
+            </div>
+        </div>
+     </div>	
+          
+      <p align="justify">Es una forma de ver televisión como siempre soñaste: disfrutarás en un mismo lugar los canales premium y de cable que más te gustan, miles de títulos para comprar o rentar y los servicios más populares de streaming. Además, próximamente podrás ver programas y películas exclusivos de Apple TV+. Es una experiencia súper personalizada, con recomendaciones que te ayudarán a descubrir más contenido que te encantará. Apple TV: un lugar para que disfrutes una nueva visión de la televisión en la pantalla que quieras. </p>
+
+
+      <h2 align="center">Apple Music.</h2>	
+      
+<div id="main-content" role="main" class="ui-content">
+     	<div class="ui-grid-solo">
+        	<div id="photos-container" class="ui-block-a">
+            	<img style="display: block;" id="smallImage" src="images/music.png" />                       
+            </div>
+        </div>
+     </div>	
+     
+      <p align="justify">Entérate de los últimos lanzamientos de tus artistas favoritos al instante, descubre nueva música con sólo ver lo que están escuchando tus amigos y disfruta las playlists recomendadas para cada ocasión. Esto es sólo una muestra de por qué Apple Music es la mejor experiencia de música en streaming. </p>
+      <ul>
+      	<li>Escucha 50 millones de canciones en streaming sin anuncios. </li>
+      	<li>Descarga tus canciones favoritas y disfrútalas sin conexión.</li>
+      	<li>Descubre contenido exclusivo y original.</li>
+      	<li>Disfruta desde todos tus dispositivos.</li>
+      </ul>
+      
+      
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>©Roberto Elvira Enriquez</h4>
+	</div>
+</div>
+<!-- ******************************************************************************************* -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
